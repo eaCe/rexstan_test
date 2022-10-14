@@ -72,3 +72,4 @@ jobs:
       - name: Configure rexstan, run rexstan
         run: |
           mysql redaxo5 -e 'INSERT INTO rex_config (`namespace`, `key`, `value`) VALUES ("rexstan", "level", "9");' -uroot -h127.0.0.1 -proot
+          redaxo_cms/redaxo/bin/console rexstan:analyze
