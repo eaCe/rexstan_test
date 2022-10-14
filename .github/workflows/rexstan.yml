@@ -1,4 +1,4 @@
-name: PHPUnit
+name: rexstan
 
 on:
   push:
@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  phpunit:
+  rexstan:
 
     runs-on: ubuntu-latest
     permissions:
@@ -71,4 +71,4 @@ jobs:
       # add rexstan config, run rexstan
       - name: Configure rexstan, run rexstan
         run: |
-          mysql -e 'INSERT INTO rex_config (`namespace`, `key`, `value`) VALUES ("rexstan", "level", "9");' -uroot -h127.0.0.1 -proot
+          mysql redaxo5 -e 'INSERT INTO rex_config (`namespace`, `key`, `value`) VALUES ("rexstan", "level", "9");' -uroot -h127.0.0.1 -proot
